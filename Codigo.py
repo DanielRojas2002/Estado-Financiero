@@ -38,7 +38,7 @@ class EstadoFinanciero:
         print(f"Este es tu Costo de Produccion De Lo Vendido : { CostoDeProduccionDeLoVendido} ")
         print("-"*100)
         print("1=SI\n2=NO")
-        opcion2=int(input("¿Quieres graficar las respuestas?"))
+        opcion2=int(input("¿Quieres graficar las respuestas? : "))
         if opcion2==1:
             datos=["ComprasTotales","ComprasNetasDeMateriales","MaterialesDisponibles","MateriaPrimaUtilizada","CostoPrimo"]
             valores=[ComprasTotales,ComprasTotales,MaterialesDisponibles,MateriaPrimaUtilizada,CostoPrimo]
@@ -47,7 +47,7 @@ class EstadoFinanciero:
             plt.title("Respuestas seccion 1 ")
             plt.show()
 
-            datos2=["CostoIncurrido","TotalDeProduccionEnProcesos","CostoDeProduccion","TotalDeArticulosListosParaLaVenta","CostoDeProduccionDeLoVendido"]
+            datos2=["CostoIncurrido","TotalDeProduccionEnProcesos","CostoDeProduccion","TotalArticulosParaLaVenta","CostoProduccionDeLoVendido"]
             valores2=[CostoIncurrido,TotalDeProduccionEnProcesos,CostoDeProduccion,TotalDeArticulosListosParaLaVenta,CostoDeProduccionDeLoVendido] 
             plt.bar(datos2,height=valores2,color=colores,width=0.5)
             plt.title("Respuestas seccion 2")
