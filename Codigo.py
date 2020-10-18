@@ -1,4 +1,5 @@
 import sys 
+import matplotlib.pyplot as plt
 class EstadoFinanciero:
     def __init__(self,MPDI,PPI,ATI,MPDF,PPF,ATF,MODF,CMPDF,GIDFF,GCMPDF,DRCMPDF):
         self.__MPDI=MPDI
@@ -36,6 +37,12 @@ class EstadoFinanciero:
         print(f"Esto es tu Total De Articulos Listos Para La Venta : {TotalDeArticulosListosParaLaVenta} ")
         print(f"Este es tu Costo de Produccion De Lo Vendido : { CostoDeProduccionDeLoVendido} ")
         print("-"*100)
+        datos=["ComprasTotales","ComprasNetasDeMateriales","MaterialesDisponibles","MateriaPrimaUtilizada","CostoPrimo"]
+        valores=[ComprasTotales,ComprasTotales,MaterialesDisponibles,MateriaPrimaUtilizada,CostoPrimo]
+        colores=["red","green","orange","blue","purple"]
+        plt.bar(datos,height=valores,color=colores,width=0.5)
+        plt.title("Respuestas seccion 1 ")
+        plt.show()
 
 opcion=1
 try:
